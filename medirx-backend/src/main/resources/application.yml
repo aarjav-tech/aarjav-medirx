@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: medirx-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/medirx_db}
+    username: ${DB_USER:medirx_user}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
